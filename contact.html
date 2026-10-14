@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Stackly Finance Consulting</title>
+  
+  
+  <link rel="icon" href="assets/top-logo.webp">
+  
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="preloader-active">
+  <!-- =========================================================================
+       PAGE PRELOADER (FINANCE INTELLIGENCE)
+       ========================================================================= -->
+  <div id="financePreloader" class="finance-preloader" role="status" aria-live="polite" aria-label="Loading Page">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-content-box">
+      
+      <div class="preloader-emblem-wrap">
+        <div class="emblem-pulse-ring"></div>
+        <div class="emblem-rotate-ring"></div>
+        <svg class="preloader-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="rgba(152, 227, 0, 0.18)" stroke-width="2" />
+          <circle class="preloader-ring-spinner" cx="40" cy="40" r="36" stroke="url(#preloaderGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="56 170" />
+          <rect class="p-bar p-bar-1" x="22" y="44" width="6" height="16" rx="2" fill="#4E635F" />
+          <rect class="p-bar p-bar-2" x="31" y="36" width="6" height="24" rx="2" fill="#7E938F" />
+          <rect class="p-bar p-bar-3" x="40" y="28" width="6" height="32" rx="2" fill="#98E300" />
+          <rect class="p-bar p-bar-4" x="49" y="20" width="6" height="40" rx="2" fill="#00E599" />
+          <path class="p-trend-line" d="M22 43 L32 34 L41 27 L51 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle class="p-trend-glow" cx="51" cy="18" r="3.5" fill="#98E300" />
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#98E300" />
+              <stop offset="50%" stop-color="#00E599" />
+              <stop offset="100%" stop-color="#38BDF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      
+      <div class="preloader-brand">
+        <h2 class="preloader-title">STACKLY<span class="preloader-accent">.</span></h2>
+        <span class="preloader-sub">FINANCIAL CONSULTING</span>
+      </div>
+
+      
+      <div class="preloader-status-bar">
+        <span class="preloader-status-text" id="preloaderStatusText">Optimizing Financial Assets...</span>
+        <span class="preloader-counter" id="preloaderPercent">0%</span>
+      </div>
+
+      
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header header-merged">
+    <div class="container nav-container">
+      
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly Logo">
+      </a>
+
+      
+      <nav class="nav-menu" id="navMenu">
+        
+        <div class="mobile-nav-header">
+          <a href="index.html" class="mobile-nav-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <button class="mobile-nav-close" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        
+        <div class="mobile-nav-links">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+              <span class="nav-text">Home</span>
+            </span>
+          </a>
+
+          <a href="about.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">About</span>
+            </span>
+          </a>
+
+          <a href="service.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Service</span>
+            </span>
+          </a>
+
+          <a href="blog.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Blog</span>
+            </span>
+          </a>
+
+          <a href="contact.html" class="nav-link active">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Contact Us</span>
+            </span>
+          </a>
+        </div>
+
+        
+        <div class="mobile-nav-footer">
+          <a href="signin.html" class="btn btn-lime btn-mobile-login">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+              </span>
+              <span class="nav-text">Log In</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+
+      
+      <div class="nav-cta">
+        <a href="signin.html" class="btn btn-lime btn-nav-login">Log In</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+  <!-- =========================================================================
+       2. CONTACT PAGE HERO SECTION (CUSTOM BACKGROUND IMAGE)
+       ========================================================================= -->
+  <section class="subpage-hero" style="--subpage-hero-bg: url('assets/hero-contact.webp');">
+    <div class="subpage-hero-overlay"></div>
+    <div class="container subpage-hero-container">
+      
+      <div class="subpage-hero-content" data-slide="left">
+        <nav class="subpage-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Contact Us</span>
+        </nav>
+        <span class="subpage-hero-tag">Direct Advisory Access</span>
+        <h1 class="subpage-hero-title">Connect With Our Senior Financial Advisory Team</h1>
+        <p class="subpage-hero-desc">Whether exploring capital restructuring, growth equity consulting, or strategic advisory partnerships, our global practice leaders are ready to collaborate.</p>
+        <div class="subpage-hero-actions">
+          <a href="#contactForm" class="btn btn-lime">Send Message</a>
+          <a href="404.html" class="btn btn-dark" style="border: 1px solid rgba(255, 255, 255, 0.25);">Call Advisory Desk</a>
+        </div>
+      </div>
+
+      
+      <div class="subpage-hero-card" data-slide="right">
+        <div class="subpage-hero-card-header">
+          <div class="subpage-hero-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Consultation Response</h3>
+        </div>
+        <div class="subpage-hero-stats-grid">
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">&lt; 24h</span>
+            <span class="subpage-hero-stat-label">Advisory Turnaround</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">10+</span>
+            <span class="subpage-hero-stat-label">Global Office Hubs</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">100%</span>
+            <span class="subpage-hero-stat-label">Confidential NDA</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">Direct</span>
+            <span class="subpage-hero-stat-label">Partner Access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. COMMON QUESTION FAQ SECTION
+       ========================================================================= -->
+  <section class="section faq-section contact-page-hero">
+    <div class="container faq-container">
+      <h2 class="faq-heading" data-reveal>Common Questions</h2>
+
+      <div class="faq-accordion-group" data-reveal>
+        
+        <div class="faq-item active">
+          <div class="faq-header">
+            <h3>What is Business Consulting and What Services Do Consultants Provide?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>This question seeks to understand the role and scope of business consulting. Consultants typically offer a range of services including strategic planning, organizational development, operational improvement, financial analysis, and market research, among others.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>When Should a Company Consider Hiring a Business Consultant?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Companies typically hire a business consultant when they face challenges they cannot resolve internally, need specialized expertise for strategic growth, are undergoing major transitions like mergers or digital transformation, or want an unbiased assessment of their operational efficiency.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How Do Business Consultants Approach Problem-Solving?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Business consultants use structured analytical frameworks. They begin by conducting comprehensive diagnostic audits, gathering quantitative and qualitative data, identifying root bottlenecks, and collaborating with leadership to develop and implement tailored, actionable solutions.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What Are the Benefits of Hiring a Business Consultant?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Key benefits include gaining external objective perspective, specialized industry expertise, accelerated project execution, enhanced operational productivity, risk mitigation, and significant cost optimizations with measurable ROI.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How Do Business Consultants Measure Success?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Success is measured through predefined Key Performance Indicators (KPIs) agreed upon prior to engagement. These include revenue growth, cost reduction, workflow efficiency gains, market share expansion, and customer retention metrics.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What Factors Should Companies When Choosing a Business Consulting Firm?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Essential factors include proven domain expertise, client case studies and testimonials, cultural alignment, communication transparency, transparent fee structures, and the consultancy's track record of delivering sustainable long-term value.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. PRICING QUESTION FAQ SECTION
+       ========================================================================= -->
+  <section class="section faq-section" style="padding-top: 0;">
+    <div class="container faq-container">
+      <h2 class="faq-heading" data-reveal>Pricing Question</h2>
+
+      <div class="faq-accordion-group" data-reveal>
+        
+        <div class="faq-item active">
+          <div class="faq-header">
+            <h3>What Factors Influence the Pricing of Business Consulting Services?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Consultants may consider factors such as the scope and complexity of the project, the level of expertise required, the duration of engagement, the consultant's reputation and experience, and the value delivered to the client.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What Pricing Models Do Business Consulting Firms Typically Offer?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Common pricing structures include hourly or daily rates, monthly retainers for ongoing strategic advisory, fixed project-based fees for scoped deliverables, and value- or performance-based pricing tied to achieved milestones.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How Do Business Consultants Estimate Project Costs?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Costs are estimated after an initial discovery session by analyzing organizational requirements, estimating required specialist hours, evaluating required research and deliverables, and factoring in potential project contingencies.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Are There Any Additional Costs or Fees Beyond the Base Consulting Rate?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Depending on engagement scope, ancillary expenses may include specialized third-party data subscriptions, on-site travel and lodging, and specialized implementation software. All potential out-of-pocket expenses are itemized transparently in upfront proposals.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Can Business Consulting Fees Be Negotiated?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>Yes, consulting fees can often be tailored. Organizations can adjust project scope, phase deliverables across quarterly milestones, or choose customized advisory packages that align with their budgetary parameters.</p>
+          </div>
+        </div>
+
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How Do Companies Evaluate the ROI of Business Consulting Services?</h3>
+            <span class="faq-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </div>
+          <div class="faq-body">
+            <p>ROI is calculated by comparing total consulting investment against financial gains achieved through increased revenue, operational cost reductions, tax efficiencies, and long-term enterprise valuation growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. CONTACT FORM SECTION
+       ========================================================================= -->
+  <section class="section contact-form-section" id="contactFormSection">
+    <div class="container contact-form-container" data-reveal>
+      
+      <div class="contact-form-header">
+        <span class="contact-section-tag">Direct Inquiry</span>
+        <h2 class="contact-form-title">Send Us a Message</h2>
+        <p class="contact-form-desc">Have questions regarding our financial advisory services or strategic consulting? Complete the form below, and our senior financial advisory team will get in touch with you promptly.</p>
+      </div>
+
+      <form id="contactForm" class="contact-form-inner">
+        <div class="contact-form-grid">
+          
+          <div class="form-left-col">
+            <div class="form-group">
+              <label for="firstName" class="form-label">First Name *</label>
+              <input type="text" id="firstName" name="firstName" class="form-input" placeholder="First name *" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName" class="form-label">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" class="form-input" placeholder="Last name *" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+              <label for="industry" class="form-label">Industry *</label>
+              <div class="custom-select-wrap contact-select-wrap" id="industryWrap">
+                <select id="industry" name="industry" required class="custom-select-native" tabindex="-1" aria-hidden="true">
+                  <option value="" disabled selected>Industry* Please select</option>
+                  <option value="financial">Financial Services & Banking</option>
+                  <option value="technology">Technology & SaaS</option>
+                  <option value="manufacturing">Manufacturing & Supply Chain</option>
+                  <option value="healthcare">Healthcare & Biotech</option>
+                  <option value="realestate">Real Estate & Construction</option>
+                  <option value="retail">Retail & E-commerce</option>
+                  <option value="other">Other Commercial Enterprise</option>
+                </select>
+                <div class="custom-select-trigger contact-select-trigger" id="industryTrigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" tabindex="0">
+                  <span class="custom-select-value is-placeholder">Industry* Please select</span>
+                  <span class="select-chevron">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <ul class="custom-select-menu contact-select-menu" id="industryMenu" role="listbox" aria-labelledby="industryTrigger">
+                  <li class="custom-select-option is-placeholder selected" data-value="" role="option">Industry* Please select</li>
+                  <li class="custom-select-option" data-value="financial" role="option">Financial Services & Banking</li>
+                  <li class="custom-select-option" data-value="technology" role="option">Technology & SaaS</li>
+                  <li class="custom-select-option" data-value="manufacturing" role="option">Manufacturing & Supply Chain</li>
+                  <li class="custom-select-option" data-value="healthcare" role="option">Healthcare & Biotech</li>
+                  <li class="custom-select-option" data-value="realestate" role="option">Real Estate & Construction</li>
+                  <li class="custom-select-option" data-value="retail" role="option">Retail & E-commerce</li>
+                  <li class="custom-select-option" data-value="other" role="option">Other Commercial Enterprise</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="form-right-col">
+            <div class="form-group" style="height: 100%;">
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Message *" required></textarea>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-send">SEND</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>Empowering Businesses with Tailored Consulting Solutions.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42A2.5 2.5 0 002.42 7.19C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 001.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+          </div>
+          <div class="footer-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Certified Global Advisory</span>
+          </div>
+          <p class="footer-sub-note">Trusted by 5,000+ businesses worldwide for strategic financial growth.</p>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="404.html">Financial Strategy</a>
+            <a href="404.html">Investment Advisory</a>
+            <a href="404.html">Tax Optimization</a>
+            <a href="404.html">Risk Management</a>
+            <a href="404.html">Capital Growth</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>02 37688 77</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>info@stackly.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>123 Business St., City, Country</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>24/7 Online Client Advisory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+          </svg>
+          <span>Copyright all right reserved Stackly</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+          <span>•</span>
+          <a href="404.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

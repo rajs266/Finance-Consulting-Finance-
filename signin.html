@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Stackly Finance Consulting</title>
+
+  
+  <link rel="icon" href="assets/top-logo.webp">
+
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="preloader-active auth-page">
+  <!-- =========================================================================
+       PAGE PRELOADER (FINANCE INTELLIGENCE)
+       ========================================================================= -->
+  <div id="financePreloader" class="finance-preloader" role="status" aria-live="polite" aria-label="Loading Page">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-content-box">
+      
+      <div class="preloader-emblem-wrap">
+        <div class="emblem-pulse-ring"></div>
+        <div class="emblem-rotate-ring"></div>
+        <svg class="preloader-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="rgba(152, 227, 0, 0.18)" stroke-width="2" />
+          <circle class="preloader-ring-spinner" cx="40" cy="40" r="36" stroke="url(#preloaderGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="56 170" />
+          <rect class="p-bar p-bar-1" x="22" y="44" width="6" height="16" rx="2" fill="#4E635F" />
+          <rect class="p-bar p-bar-2" x="31" y="36" width="6" height="24" rx="2" fill="#7E938F" />
+          <rect class="p-bar p-bar-3" x="40" y="28" width="6" height="32" rx="2" fill="#98E300" />
+          <rect class="p-bar p-bar-4" x="49" y="20" width="6" height="40" rx="2" fill="#00E599" />
+          <path class="p-trend-line" d="M22 43 L32 34 L41 27 L51 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle class="p-trend-glow" cx="51" cy="18" r="3.5" fill="#98E300" />
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#98E300" />
+              <stop offset="50%" stop-color="#00E599" />
+              <stop offset="100%" stop-color="#38BDF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      
+      <div class="preloader-brand">
+        <h2 class="preloader-title">STACKLY<span class="preloader-accent">.</span></h2>
+        <span class="preloader-sub">FINANCIAL CONSULTING</span>
+      </div>
+
+      
+      <div class="preloader-status-bar">
+        <span class="preloader-status-text" id="preloaderStatusText">Optimizing Financial Assets...</span>
+        <span class="preloader-counter" id="preloaderPercent">0%</span>
+      </div>
+
+      
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <main class="auth-wrapper">
+    
+    <div class="auth-form-container">
+      
+      <div class="auth-header-bar">
+        <a href="index.html" class="auth-brand" aria-label="Stackly Home">
+          <img src="assets/logo.webp" alt="Stackly Logo">
+        </a>
+        <a href="index.html" class="auth-back-btn" title="Back to Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+      </div>
+
+      <h1 class="auth-title">Welcome back!</h1>
+      <p class="auth-subtitle">Select your account role and enter credentials to access your dashboard</p>
+
+      
+      <div class="role-select-section">
+        <span class="role-select-label">Select Account Role:</span>
+        <div class="role-select-grid">
+          <div class="role-card active" data-role="corporate" id="roleCorporate" role="button" tabindex="0">
+            <div class="role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="role-text">
+              <h4>Corporate Client</h4>
+              <p>Audits, Advisory &amp; Vault</p>
+            </div>
+            <div class="role-card-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="role-card" data-role="admin" id="roleAdmin" role="button" tabindex="0">
+            <div class="role-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="role-text">
+              <h4>Partner / Admin</h4>
+              <p>Practice Ops &amp; Filings</p>
+            </div>
+            <div class="role-card-check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="auth-form" id="signinForm" novalidate>
+        
+        <input type="hidden" id="selectedRole" name="selectedRole" value="corporate">
+
+        
+        <div class="auth-field" id="signinEmailField">
+          <label for="signinEmail" class="auth-label">Email address</label>
+          <div class="auth-input-wrap">
+            <input type="email" id="signinEmail" class="auth-input" placeholder="Enter your corporate email" required autocomplete="email">
+          </div>
+          <div class="auth-error-msg" id="signinEmailError"></div>
+        </div>
+
+        
+        <div class="auth-field" id="signinPasswordField">
+          <div class="auth-label-row">
+            <label for="signinPassword" class="auth-label">Password</label>
+            <a href="404.html" class="auth-forgot-link">forgot password</a>
+          </div>
+          <div class="auth-input-wrap">
+            <input type="password" id="signinPassword" class="auth-input" placeholder="Enter your password" required autocomplete="current-password">
+            <button type="button" class="password-toggle-btn" aria-label="Show password">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <div class="auth-error-msg" id="signinPasswordError"></div>
+        </div>
+
+        
+        <label class="auth-checkbox-row">
+          <input type="checkbox" id="rememberMe" class="auth-checkbox">
+          <span>Remember for 30 days</span>
+        </label>
+
+        
+        <button type="submit" class="btn-auth-submit">Login</button>
+
+        
+        <div class="auth-divider">
+          <span>Or</span>
+        </div>
+
+        
+        <div class="auth-social-row">
+          <button type="button" class="btn-social" onclick="window.location.href='404.html'">
+            <svg viewBox="0 0 48 48" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.55 10.78l7.98-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+              <path fill="none" d="M0 0h48v48H0z"/>
+            </svg>
+            <span>Sign in with Google</span>
+          </button>
+          <button type="button" class="btn-social" onclick="window.location.href='404.html'">
+            <svg viewBox="0 0 170 170" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.07-7.63-7.85-11.78-14.34-6.3-9.83-11.41-21.03-15.34-33.6-3.92-12.57-5.89-24.32-5.89-35.25 0-14.83 3.8-27.21 11.41-37.13 7.6-9.93 17.15-14.99 28.65-15.19 4.9.11 10.22 1.34 15.96 3.69 5.74 2.35 9.4 3.59 10.99 3.69 1.81-.1 5.74-1.39 11.79-3.86 6.04-2.48 11.39-3.57 16.05-3.29 13.37 1.09 23.82 5.92 31.33 14.51-11.73 7.07-17.48 16.96-17.26 29.66.22 10 4.13 18.26 11.74 24.78 4.35 3.8 9.35 6.47 15.01 8.01-2.4 7.07-5.29 14.24-8.68 21.5zM119.22 33.15c0-7.39 2.68-14.47 8.03-21.23 5.36-6.76 12.01-11.16 19.96-13.2 0 .91.07 1.83.07 2.76 0 7.18-2.82 14.28-8.45 21.32-5.63 7.04-12.3 11.23-20.02 12.57-.22-.74-.33-1.48-.33-2.22z"/>
+            </svg>
+            <span>Sign in with Apple</span>
+          </button>
+        </div>
+
+        
+        <p class="auth-switch-text">
+          Don't have an account? <a href="signup.html">Sign Up</a>
+        </p>
+      </form>
+    </div>
+
+    
+    <div class="auth-image-container">
+      <img src="assets/signin-illustration.webp" alt="Stackly Executive Advisory Meeting Workspace">
+    </div>
+  </main>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Articles & News - Stackly Finance Consulting</title>
+  
+  
+  <link rel="icon" href="assets/top-logo.webp">
+  
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="preloader-active">
+  <!-- =========================================================================
+       PAGE PRELOADER (FINANCE INTELLIGENCE)
+       ========================================================================= -->
+  <div id="financePreloader" class="finance-preloader" role="status" aria-live="polite" aria-label="Loading Page">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-content-box">
+      
+      <div class="preloader-emblem-wrap">
+        <div class="emblem-pulse-ring"></div>
+        <div class="emblem-rotate-ring"></div>
+        <svg class="preloader-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="rgba(152, 227, 0, 0.18)" stroke-width="2" />
+          <circle class="preloader-ring-spinner" cx="40" cy="40" r="36" stroke="url(#preloaderGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="56 170" />
+          <rect class="p-bar p-bar-1" x="22" y="44" width="6" height="16" rx="2" fill="#4E635F" />
+          <rect class="p-bar p-bar-2" x="31" y="36" width="6" height="24" rx="2" fill="#7E938F" />
+          <rect class="p-bar p-bar-3" x="40" y="28" width="6" height="32" rx="2" fill="#98E300" />
+          <rect class="p-bar p-bar-4" x="49" y="20" width="6" height="40" rx="2" fill="#00E599" />
+          <path class="p-trend-line" d="M22 43 L32 34 L41 27 L51 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle class="p-trend-glow" cx="51" cy="18" r="3.5" fill="#98E300" />
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#98E300" />
+              <stop offset="50%" stop-color="#00E599" />
+              <stop offset="100%" stop-color="#38BDF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      
+      <div class="preloader-brand">
+        <h2 class="preloader-title">STACKLY<span class="preloader-accent">.</span></h2>
+        <span class="preloader-sub">FINANCIAL CONSULTING</span>
+      </div>
+
+      
+      <div class="preloader-status-bar">
+        <span class="preloader-status-text" id="preloaderStatusText">Optimizing Financial Assets...</span>
+        <span class="preloader-counter" id="preloaderPercent">0%</span>
+      </div>
+
+      
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header header-merged">
+    <div class="container nav-container">
+      
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly Logo">
+      </a>
+
+      
+      <nav class="nav-menu" id="navMenu">
+        
+        <div class="mobile-nav-header">
+          <a href="index.html" class="mobile-nav-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <button class="mobile-nav-close" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        
+        <div class="mobile-nav-links">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+              <span class="nav-text">Home</span>
+            </span>
+          </a>
+
+          <a href="about.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">About</span>
+            </span>
+          </a>
+
+          <a href="service.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Service</span>
+            </span>
+          </a>
+
+          <a href="blog.html" class="nav-link active">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Blog</span>
+            </span>
+          </a>
+
+          <a href="contact.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Contact Us</span>
+            </span>
+          </a>
+        </div>
+
+        
+        <div class="mobile-nav-footer">
+          <a href="signin.html" class="btn btn-lime btn-mobile-login">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+              </span>
+              <span class="nav-text">Log In</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+
+      
+      <div class="nav-cta">
+        <a href="signin.html" class="btn btn-lime btn-nav-login">Log In</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+  <!-- =========================================================================
+       2. BLOG PAGE HERO SECTION (CUSTOM BACKGROUND IMAGE)
+       ========================================================================= -->
+  <section class="subpage-hero" style="--subpage-hero-bg: url('assets/hero-blog.webp');">
+    <div class="subpage-hero-overlay"></div>
+    <div class="container subpage-hero-container">
+      
+      <div class="subpage-hero-content" data-slide="left">
+        <nav class="subpage-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">Blog</span>
+        </nav>
+        <span class="subpage-hero-tag">Market Intelligence & Research</span>
+        <h1 class="subpage-hero-title">Recent Articles & Strategic Financial News</h1>
+        <p class="subpage-hero-desc">Curated insights, market trend forecasts, and actionable advisory perspectives from senior finance consultants and economic analysts.</p>
+        <div class="subpage-hero-actions">
+          <a href="#featuredArticles" class="btn btn-lime">Read Articles</a>
+          <a href="404.html" class="btn btn-dark" style="border: 1px solid rgba(255, 255, 255, 0.25);">Get Market Updates</a>
+        </div>
+      </div>
+
+      
+      <div class="subpage-hero-card" data-slide="right">
+        <div class="subpage-hero-card-header">
+          <div class="subpage-hero-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <h3>Editorial Briefs</h3>
+        </div>
+        <div class="subpage-hero-stats-grid">
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">120+</span>
+            <span class="subpage-hero-stat-label">Analyses Published</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">45K+</span>
+            <span class="subpage-hero-stat-label">Executive Readers</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">Weekly</span>
+            <span class="subpage-hero-stat-label">Market Briefings</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">Top 5%</span>
+            <span class="subpage-hero-stat-label">Financial Accuracy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. MAIN BLOG SECTION (TWO-COLUMN LAYOUT)
+       ========================================================================= -->
+  <section class="blog-main-section" id="featuredArticles">
+    <div class="container">
+      
+      
+      <div class="blog-section-intro text-center" data-reveal>
+        <span class="section-tag dark">Market Insights & Advisory</span>
+        <h2 class="section-title">Latest Financial Insights & Strategic Analysis</h2>
+        <p class="section-subtitle">Stay informed with expert perspectives, actionable corporate strategies, and deep market intelligence designed to empower financial decision-making.</p>
+      </div>
+
+      
+      <div class="blog-top-row-grid">
+        
+        
+        <div class="blog-main-articles" data-slide="left">
+          
+          
+          <article class="featured-blog-article" data-reveal>
+            <div class="featured-blog-thumb">
+              <span class="blog-category-badge">Interactive content</span>
+              <img src="assets/archive-3.webp" alt="Unlocking the Power of Content Marketing">
+            </div>
+            <h2 class="featured-blog-title">
+              <a href="404.html">Unlocking the Power of Content Marketing: Strategies for Success</a>
+            </h2>
+          </article>
+
+          
+          <article class="featured-blog-article delay-1" data-reveal>
+            <div class="featured-blog-thumb">
+              <span class="blog-category-badge">Marketing Tools</span>
+              <img src="assets/archive-4.webp" alt="Beyond Borders: Expanding Your Reach with International Marketing">
+            </div>
+            <h2 class="featured-blog-title">
+              <a href="404.html">Beyond Borders: Expanding Your Reach with International Marketing</a>
+            </h2>
+            <div class="featured-blog-meta">
+              <span class="blog-date">April 26, 2024</span>
+              <a href="404.html" class="blog-read-more">
+                <span>Read More</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        
+        <div class="blog-archives-wrap" data-slide="right">
+          <div class="archives-widget" data-reveal>
+            <h3>Archives</h3>
+            <div class="archives-list">
+              
+              <div class="archive-item">
+                <div class="archive-thumb">
+                  <img src="assets/archive-3.webp" alt="Unlocking the Power of Content Marketing">
+                </div>
+                <div class="archive-info">
+                  <h4><a href="404.html">Unlocking the Power of Content Marketing: Strategies for Success</a></h4>
+                  <span class="archive-date">April 1, 2024</span>
+                </div>
+              </div>
+
+              
+              <div class="archive-item">
+                <div class="archive-thumb">
+                  <img src="assets/beb70b0f39845eaf4f014f92328d3cf15049d820.webp" alt="Mastering Social Media">
+                </div>
+                <div class="archive-info">
+                  <h4><a href="404.html">Mastering Social Media: Tips and Tactics for Business ...</a></h4>
+                  <span class="archive-date">April 1, 2024</span>
+                </div>
+              </div>
+
+              
+              <div class="archive-item">
+                <div class="archive-thumb">
+                  <img src="assets/archive-1.webp" alt="The Art of Email Marketing">
+                </div>
+                <div class="archive-info">
+                  <h4><a href="404.html">The Art of Email Marketing: Crafting Compelling ...</a></h4>
+                  <span class="archive-date">April 1, 2024</span>
+                </div>
+              </div>
+
+              
+              <div class="archive-item">
+                <div class="archive-thumb">
+                  <img src="assets/archive-2.webp" alt="Unlocking the Power of Content Marketing">
+                </div>
+                <div class="archive-info">
+                  <h4><a href="404.html">Unlocking the Power of Content Marketing: Strategies for Success</a></h4>
+                  <span class="archive-date">April 1, 2024</span>
+                </div>
+              </div>
+
+              
+              <div class="archive-item">
+                <div class="archive-thumb">
+                  <img src="assets/archive-5.webp" alt="Beyond Borders International reach">
+                </div>
+                <div class="archive-info">
+                  <h4><a href="404.html">Beyond Borders: Expanding Your Reach with International ...</a></h4>
+                  <span class="archive-date">April 1, 2024</span>
+                </div>
+              </div>
+
+              
+              <div class="archive-item">
+                <div class="archive-thumb">
+                  <img src="assets/blog-1.webp" alt="Strategic Financial Advisory for Long-Term Corporate Growth">
+                </div>
+                <div class="archive-info">
+                  <h4><a href="404.html">Strategic Financial Advisory for Long-Term Corporate Growth</a></h4>
+                  <span class="archive-date">April 1, 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      
+      <div class="blog-bottom-row-grid">
+        
+        
+        <div class="blog-bottom-left" data-slide="left">
+          <div class="blog-register-card" data-reveal>
+            <form class="blog-register-form" id="blogInquiryForm" action="404.html">
+              <div class="form-group">
+                <label for="regName">Name *</label>
+                <input type="text" id="regName" name="name" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="regEmail">Email *</label>
+                <input type="email" id="regEmail" name="email" placeholder="Your Email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="regService">Services *</label>
+                <div class="custom-select-wrap" id="regServiceWrap">
+                  <select id="regService" name="service" required class="custom-select-native" tabindex="-1" aria-hidden="true">
+                    <option value="" disabled selected>Select Services</option>
+                    <option value="financial-strategy">Financial Strategy</option>
+                    <option value="investment-advisory">Investment Advisory</option>
+                    <option value="tax-optimization">Tax Optimization</option>
+                    <option value="risk-management">Risk Management</option>
+                    <option value="capital-growth">Capital Growth</option>
+                  </select>
+                  <div class="custom-select-trigger" id="regServiceTrigger" role="combobox" aria-haspopup="listbox" aria-expanded="false" tabindex="0">
+                    <span class="custom-select-value is-placeholder">Select Services</span>
+                    <span class="select-chevron">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </span>
+                  </div>
+                  <ul class="custom-select-menu" id="regServiceMenu" role="listbox" aria-labelledby="regServiceTrigger">
+                    <li class="custom-select-option is-placeholder selected" data-value="" role="option">Select Services</li>
+                    <li class="custom-select-option" data-value="financial-strategy" role="option">Financial Strategy</li>
+                    <li class="custom-select-option" data-value="investment-advisory" role="option">Investment Advisory</li>
+                    <li class="custom-select-option" data-value="tax-optimization" role="option">Tax Optimization</li>
+                    <li class="custom-select-option" data-value="risk-management" role="option">Risk Management</li>
+                    <li class="custom-select-option" data-value="capital-growth" role="option">Capital Growth</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="regMessage">Message *</label>
+                <textarea id="regMessage" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-register">REGISTER</button>
+            </form>
+          </div>
+        </div>
+
+        
+        <div class="blog-bottom-sidebar" data-slide="right">
+          
+          
+          <div class="custom-solution-cta-card delay-1" data-reveal>
+            <div class="cta-chart-graphic" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" preserveAspectRatio="none">
+                <line x1="15" y1="210" x2="385" y2="210" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <line x1="15" y1="145" x2="385" y2="145" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" stroke-width="1"/>
+                <line x1="15" y1="80" x2="385" y2="80" stroke="rgba(255,255,255,0.06)" stroke-dasharray="4 4" stroke-width="1"/>
+                <text x="25" y="230" fill="rgba(255,255,255,0.25)" font-size="10" font-family="sans-serif">9:00</text>
+                <text x="180" y="230" fill="rgba(255,255,255,0.25)" font-size="10" font-family="sans-serif">11:00</text>
+                <text x="320" y="230" fill="rgba(255,255,255,0.25)" font-size="10" font-family="sans-serif">13:00</text>
+                <text x="325" y="112" fill="rgba(255,255,255,0.22)" font-size="10" font-family="sans-serif">769.00</text>
+                <path d="M 10 185 Q 90 200 160 140 T 280 90 T 390 35" stroke="rgba(142, 214, 18, 0.4)" stroke-width="2.5" fill="none"/>
+                <path d="M 10 205 Q 110 175 200 150 T 330 95 T 390 65" stroke="rgba(142, 214, 18, 0.2)" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+            <div class="cta-inner-content">
+              <h3>Request a Customized Solution for Your Business!</h3>
+              <p>Every business is unique. Request a tailored solution crafted specifically for your organization's challenges and goals.</p>
+              <a href="contact.html" class="btn btn-lime cta-contact-btn">CONTACT US</a>
+            </div>
+          </div>
+
+          
+          <div class="sidebar-testimonial-card delay-2" data-reveal>
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <blockquote>"As someone who coaches executives, I needed a professional online presence. The design instantly communicates credibility and expertise—couldn't be happier."</blockquote>
+            <div class="client-profile">
+              <div class="client-avatar">
+                <img src="assets/client-1.webp" alt="Ana Sánchez">
+              </div>
+              <div class="client-info">
+                <h4>Ana Sánchez</h4>
+                <p>Sales Consultant</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>Empowering Businesses with Tailored Consulting Solutions.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42A2.5 2.5 0 002.42 7.19C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 001.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+          </div>
+          <div class="footer-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Certified Global Advisory</span>
+          </div>
+          <p class="footer-sub-note">Trusted by 5,000+ businesses worldwide for strategic financial growth.</p>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="404.html">Financial Strategy</a>
+            <a href="404.html">Investment Advisory</a>
+            <a href="404.html">Tax Optimization</a>
+            <a href="404.html">Risk Management</a>
+            <a href="404.html">Capital Growth</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>02 37688 77</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>info@stackly.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>123 Business St., City, Country</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>24/7 Online Client Advisory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+          </svg>
+          <span>Copyright all right reserved Stackly</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+          <span>•</span>
+          <a href="404.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

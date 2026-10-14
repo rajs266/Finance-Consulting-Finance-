@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Stackly Finance Consulting</title>
+
+  
+  <link rel="icon" href="assets/top-logo.webp">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #F8FAFC; min-height: 100vh; display: flex; flex-direction: column; margin: 0; overflow-x: clip;" class="preloader-active">
+  <!-- =========================================================================
+       PAGE PRELOADER (FINANCE INTELLIGENCE)
+       ========================================================================= -->
+  <div id="financePreloader" class="finance-preloader" role="status" aria-live="polite" aria-label="Loading Page">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-content-box">
+      
+      <div class="preloader-emblem-wrap">
+        <div class="emblem-pulse-ring"></div>
+        <div class="emblem-rotate-ring"></div>
+        <svg class="preloader-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="rgba(152, 227, 0, 0.18)" stroke-width="2" />
+          <circle class="preloader-ring-spinner" cx="40" cy="40" r="36" stroke="url(#preloaderGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="56 170" />
+          <rect class="p-bar p-bar-1" x="22" y="44" width="6" height="16" rx="2" fill="#4E635F" />
+          <rect class="p-bar p-bar-2" x="31" y="36" width="6" height="24" rx="2" fill="#7E938F" />
+          <rect class="p-bar p-bar-3" x="40" y="28" width="6" height="32" rx="2" fill="#98E300" />
+          <rect class="p-bar p-bar-4" x="49" y="20" width="6" height="40" rx="2" fill="#00E599" />
+          <path class="p-trend-line" d="M22 43 L32 34 L41 27 L51 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle class="p-trend-glow" cx="51" cy="18" r="3.5" fill="#98E300" />
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#98E300" />
+              <stop offset="50%" stop-color="#00E599" />
+              <stop offset="100%" stop-color="#38BDF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      
+      <div class="preloader-brand">
+        <h2 class="preloader-title">STACKLY<span class="preloader-accent">.</span></h2>
+        <span class="preloader-sub">FINANCIAL CONSULTING</span>
+      </div>
+
+      
+      <div class="preloader-status-bar">
+        <span class="preloader-status-text" id="preloaderStatusText">Optimizing Financial Assets...</span>
+        <span class="preloader-counter" id="preloaderPercent">0%</span>
+      </div>
+
+      
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <header class="dash-navbar">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <button class="dash-sidebar-toggle" id="dashSidebarToggle" aria-label="Toggle Side Menu" title="Open Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="dash-logo" title="Stackly Finance Consulting">
+        <img src="assets/logo.webp" alt="Stackly Logo">
+      </a>
+    </div>
+
+    <div class="dash-nav-actions">
+      <a href="index.html" class="dash-home-btn" title="Back to Website">
+        <i class="fas fa-home"></i> <span>Home</span>
+      </a>
+
+      
+      <div class="dash-notif-wrap">
+        <button class="dash-bell-btn" id="dashBellBtn" title="Partner Action Alerts" aria-label="Partner Action Alerts">
+          <i class="fas fa-bell"></i>
+          <span class="bell-badge-pulse">4</span>
+        </button>
+        <div class="dash-notif-dropdown" id="dashNotifDropdown">
+          <div class="notif-header">
+            <strong style="font-size: 0.88rem; color: #0F172A;">Executive Queue (4 Alerts)</strong>
+            <a href="javascript:void(0)" id="clearNotifBtn" style="font-size: 0.74rem; color: #072B24; font-weight: 700; text-decoration: none;">Clear Queue</a>
+          </div>
+          <div class="notif-body">
+            <a href="404.html" class="notif-item">
+              <i class="fas fa-file-signature" style="color: #F59E0B; font-size: 1.15rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.82rem; color: #0F172A;">Statutory Audit Sign-Off</strong>
+                <p style="font-size: 0.74rem; color: #64748B; margin: 2px 0 0;">Apex Industrial FY25-26 Form 3CD requires partner digital signature.</p>
+                <span style="font-size: 0.68rem; color: #94A3B8;">8 minutes ago</span>
+              </div>
+            </a>
+            <a href="404.html" class="notif-item">
+              <i class="fas fa-shield-halved" style="color: #10B981; font-size: 1.15rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.82rem; color: #0F172A;">GST Section 73 Defense Cleared</strong>
+                <p style="font-size: 0.74rem; color: #64748B; margin: 2px 0 0;">Salem Steel ITC reversal submission accepted with zero penalty.</p>
+                <span style="font-size: 0.68rem; color: #94A3B8;">24 minutes ago</span>
+              </div>
+            </a>
+            <a href="404.html" class="notif-item">
+              <i class="fas fa-building" style="color: #072B24; font-size: 1.15rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.82rem; color: #0F172A;">New Enterprise Client Onboarding</strong>
+                <p style="font-size: 0.74rem; color: #64748B; margin: 2px 0 0;">Kaveri Healthcare submitted retainer consultation mandate.</p>
+                <span style="font-size: 0.68rem; color: #94A3B8;">1 hour ago</span>
+              </div>
+            </a>
+            <a href="404.html" class="notif-item">
+              <i class="fas fa-receipt" style="color: #3B82F6; font-size: 1.15rem; margin-top: 2px;"></i>
+              <div>
+                <strong style="display: block; font-size: 0.82rem; color: #0F172A;">Q4 Retainer Fee Remittance</strong>
+                <p style="font-size: 0.74rem; color: #64748B; margin: 2px 0 0;">₹24,50,000 corporate consulting fee deposited by Deccan Infra.</p>
+                <span style="font-size: 0.68rem; color: #94A3B8;">2 hours ago</span>
+              </div>
+            </a>
+          </div>
+          <div class="notif-footer">
+            <span class="notif-footer-link">All Systems Operational <i class="fas fa-check-circle" style="color: #10B981;"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="dash-sidebar-backdrop" id="dashSidebarBackdrop"></div>
+
+  
+  <div class="dash-app-shell">
+
+    
+    <aside class="dash-sidebar-dock">
+      <div>
+        
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-bottom: 18px; border-bottom: 1.5px solid #E2E8F0;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #072B24 0%, #0B352E 100%); color: #98E300; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 4px 14px rgba(7, 43, 36, 0.3); border: 2px solid #98E300;" id="adminAvatar">V</div>
+          <div style="overflow: hidden;">
+            <strong style="display: block; font-size: 0.95rem; color: #0F172A; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" id="sideAdminName">Vignesh Moorthy</strong>
+            <span style="font-size: 0.74rem; color: #64748B; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" id="sideAdminEmail">vignesh@stackly.com</span>
+            <span style="font-size: 0.68rem; font-weight: 800; color: #072B24; background: rgba(152, 227, 0, 0.25); padding: 2px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; border: 1px solid rgba(7, 43, 36, 0.2);">
+              <i class="fas fa-shield-alt" style="font-size: 0.65rem;"></i> Managing Partner
+            </span>
+          </div>
+        </div>
+
+        
+        <ul class="dashboard-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)" class="active" data-tab="statistics">
+              <i class="fas fa-chart-line" style="width: 20px;"></i> Executive Stats &amp; Retainers
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" data-tab="clients">
+              <i class="fas fa-users" style="width: 20px;"></i> Corporate Roster &amp; Clients (164)
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" data-tab="filings">
+              <i class="fas fa-file-invoice" style="width: 20px;"></i> Statutory Filings &amp; Audits
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" data-tab="notices">
+              <i class="fas fa-gavel" style="width: 20px;"></i> Litigation &amp; Scrutiny Shield (3)
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" data-tab="treasury">
+              <i class="fas fa-vault" style="width: 20px;"></i> Retainer Treasury &amp; Billing
+            </a>
+          </li>
+        </ul>
+
+        
+        <div style="background: linear-gradient(135deg, rgba(7, 43, 36, 0.05) 0%, rgba(59, 130, 246, 0.1) 100%); border: 1.5px solid rgba(7, 43, 36, 0.1); border-radius: 14px; padding: 14px 16px; margin-top: 24px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+            <div style="width: 28px; height: 28px; border-radius: 8px; background: #072B24; color: #98E300; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">
+              <i class="fas fa-server"></i>
+            </div>
+            <strong style="font-size: 0.82rem; color: #072B24;">Practice Operations</strong>
+          </div>
+          <p style="font-size: 0.74rem; color: #64748B; margin: 0 0 8px; line-height: 1.4;">Salem HQ encrypted ledger sync active. All audits reconciled.</p>
+          <a href="404.html" style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.74rem; font-weight: 700; color: #072B24; text-decoration: none;">
+            <span>Server Audit Log</span> <i class="fas fa-arrow-right" style="font-size: 0.65rem;"></i>
+          </a>
+        </div>
+      </div>
+
+      
+      <div style="border-top: 1.5px solid #E2E8F0; padding-top: 16px; margin-top: auto;">
+        <a href="javascript:void(0)" class="dash-logout-trigger" style="display: flex; align-items: center; gap: 12px; color: #EF4444; text-decoration: none; font-weight: 700; font-size: 0.88rem; padding: 10px 14px; border-radius: 10px; transition: all 0.2s ease;">
+          <i class="fas fa-sign-out-alt" style="width: 20px;"></i> Logout Session
+        </a>
+      </div>
+    </aside>
+
+    
+    <main class="dash-main-scroll">
+
+      
+      <div class="dash-title-banner">
+        <div class="dash-banner-flex">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap;">
+              <span class="dash-status-pill" style="background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.5); color: #34D399;">
+                <span class="pulse-indicator-emerald"></span> SALEM HQ PARTNER DESK ONLINE
+              </span>
+              <span style="font-size: 0.74rem; color: #CFE2DE; background: rgba(255,255,255,0.08); padding: 4px 10px; border-radius: 20px;">
+                <i class="fas fa-building" style="margin-right: 4px;"></i> MMR Complex, Salem Hub
+              </span>
+            </div>
+            <h1 style="font-size: 1.85rem; margin: 0 0 6px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.02em;">Executive Management Console</h1>
+            <p style="color: #CFE2DE; font-size: 0.88rem; margin: 0;">Managing Partner: <strong style="color: #98E300;" id="adminUserName">Vignesh Moorthy</strong> &bull; Supervised Chambers: Salem, Chennai &amp; Bangalore</p>
+          </div>
+
+          
+          <div class="dash-banner-right-hub">
+            <div class="dash-hub-pill dash-hub-status">
+              <span class="pulse-indicator-emerald"></span>
+              <span>Audit Gateway Active</span>
+            </div>
+            <div class="dash-hub-pill dash-hub-clock">
+              <i class="fas fa-clock"></i>
+              <span id="dashLiveClock">--:--:-- IST</span>
+            </div>
+            <button type="button" class="dash-hub-action-btn" id="runHealthScanBtn">
+              <i class="fas fa-radar"></i>
+              <span>Instant Audit Scan</span>
+              <span class="hotline-badge">164 Active</span>
+            </button>
+            <a href="404.html" class="dash-hub-icon-btn" title="Batch Statutory Actions">
+              <i class="fas fa-tasks"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="dash-content-padding">
+
+        
+        
+        
+        <div class="dash-tab-pane active" id="tab-statistics">
+
+          
+          <div class="dash-kpi-grid">
+            
+            <div class="fc-kpi-card card-portfolio">
+              <div class="fc-kpi-top">
+                <div class="fc-kpi-icon-wrap icon-portfolio-theme">
+                  <i class="fas fa-indian-rupee-sign"></i>
+                </div>
+                <span class="fc-kpi-tag positive"><i class="fas fa-arrow-trend-up"></i> +22.4% YoY</span>
+              </div>
+              <h5 class="fc-kpi-title">Total Retainer Portfolio</h5>
+              <div class="fc-kpi-value" style="color: #072B24;">₹38.4 Cr</div>
+              <div class="fc-kpi-progress-bar">
+                <div class="fc-kpi-progress-fill" style="width: 96%; background: linear-gradient(90deg, #072B24, #98E300);"></div>
+              </div>
+              <div class="fc-kpi-footer">
+                <span style="color: #059669; font-weight: 700;">₹9.6 Cr Q4 Inflow</span>
+                <span>164 Entities</span>
+              </div>
+            </div>
+
+            
+            <div class="fc-kpi-card card-clients">
+              <div class="fc-kpi-top">
+                <div class="fc-kpi-icon-wrap icon-clients-theme">
+                  <i class="fas fa-building"></i>
+                </div>
+                <span class="fc-kpi-tag positive"><i class="fas fa-check-double"></i> 99.2% Retention</span>
+              </div>
+              <h5 class="fc-kpi-title">Active Corporate Groups</h5>
+              <div class="fc-kpi-value" style="color: #10B981;">164 Clients</div>
+              <div class="fc-kpi-progress-bar">
+                <div class="fc-kpi-progress-fill" style="width: 88%; background: #10B981;"></div>
+              </div>
+              <div class="fc-kpi-footer">
+                <span style="color: #0284C7; font-weight: 700;">Salem &bull; Chennai &bull; Blr</span>
+                <span>Enterprise Tier</span>
+              </div>
+            </div>
+
+            
+            <div class="fc-kpi-card card-tax">
+              <div class="fc-kpi-top">
+                <div class="fc-kpi-icon-wrap icon-tax-theme">
+                  <i class="fas fa-shield-halved"></i>
+                </div>
+                <span class="fc-kpi-tag warning"><i class="fas fa-award"></i> 0 Penalty Exposure</span>
+              </div>
+              <h5 class="fc-kpi-title">Statutory Tax Shield</h5>
+              <div class="fc-kpi-value" style="color: #FF7A00;">₹6.8 Cr Saved</div>
+              <div class="fc-kpi-progress-bar">
+                <div class="fc-kpi-progress-fill" style="width: 100%; background: #FF7A00;"></div>
+              </div>
+              <div class="fc-kpi-footer">
+                <span style="color: #D97706; font-weight: 700;">48 Certified Filings</span>
+                <span>ICAI Standard</span>
+              </div>
+            </div>
+
+            
+            <div class="fc-kpi-card card-margin">
+              <div class="fc-kpi-top">
+                <div class="fc-kpi-icon-wrap icon-margin-theme">
+                  <i class="fas fa-chart-pie"></i>
+                </div>
+                <span class="fc-kpi-tag info"><i class="fas fa-bolt"></i> Optimal Realization</span>
+              </div>
+              <h5 class="fc-kpi-title">Practice Profit Margin</h5>
+              <div class="fc-kpi-value" style="color: #3B82F6;">48.5%</div>
+              <div class="fc-kpi-progress-bar">
+                <div class="fc-kpi-progress-fill" style="width: 92%; background: #3B82F6;"></div>
+              </div>
+              <div class="fc-kpi-footer">
+                <span style="color: #059669; font-weight: 700;">Net Partner Yield</span>
+                <span>FY 2025-26</span>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="dash-grid-2col">
+            
+            <div class="dash-card-box">
+              <div class="dash-card-box-header">
+                <div>
+                  <h4><i class="fas fa-briefcase" style="color: #072B24; margin-right: 8px;"></i> Practice Retainer Sectors</h4>
+                  <span style="font-size: 0.76rem; color: #64748B;">Distribution Breakdown &bull; ₹38.4 Cr Advisory Pool</span>
+                </div>
+                <span class="fc-kpi-tag positive">+22.4% YoY</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                    <span><i class="fas fa-industry" style="color: #072B24; margin-right: 6px;"></i> Manufacturing &amp; Steel</span>
+                    <strong style="color: #072B24;">₹14.6 Cr (38%)</strong>
+                  </div>
+                  <div class="fc-kpi-progress-bar"><div class="fc-kpi-progress-fill" style="width: 38%; background: #072B24;"></div></div>
+                  <span style="font-size: 0.72rem; color: #64748B;">Salem Steel Hub &bull; 58 Conglomerates &bull; 98.4% Realized</span>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                    <span><i class="fas fa-shirt" style="color: #3B82F6; margin-right: 6px;"></i> Textiles, Spinning &amp; Garments</span>
+                    <strong style="color: #3B82F6;">₹10.7 Cr (28%)</strong>
+                  </div>
+                  <div class="fc-kpi-progress-bar"><div class="fc-kpi-progress-fill" style="width: 28%; background: #3B82F6;"></div></div>
+                  <span style="font-size: 0.72rem; color: #64748B;">Tirupur &amp; Erode Clusters &bull; 46 Mills &bull; 96.2% Realized</span>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                    <span><i class="fas fa-laptop-code" style="color: #10B981; margin-right: 6px;"></i> SaaS, FinTech &amp; IT Enterprises</span>
+                    <strong style="color: #10B981;">₹7.7 Cr (20%)</strong>
+                  </div>
+                  <div class="fc-kpi-progress-bar"><div class="fc-kpi-progress-fill" style="width: 20%; background: #10B981;"></div></div>
+                  <span style="font-size: 0.72rem; color: #64748B;">Bangalore &amp; Chennai SEZs &bull; 38 Firms &bull; 100% Realized</span>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">
+                    <span><i class="fas fa-notes-medical" style="color: #FF7A00; margin-right: 6px;"></i> Healthcare, Hospitals &amp; Pharma</span>
+                    <strong style="color: #FF7A00;">₹5.4 Cr (14%)</strong>
+                  </div>
+                  <div class="fc-kpi-progress-bar"><div class="fc-kpi-progress-fill" style="width: 14%; background: #FF7A00;"></div></div>
+                  <span style="font-size: 0.72rem; color: #64748B;">South Zone Hospital Chains &bull; 22 Groups &bull; 94.8% Realized</span>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="dash-card-box">
+              <div class="dash-card-box-header">
+                <div>
+                  <h4><i class="fas fa-clock" style="color: #EF4444; margin-right: 8px;"></i> Statutory Regulatory Deadlines</h4>
+                  <span style="font-size: 0.76rem; color: #64748B;">Chartered Compliance Clock &bull; Managing Partner Triage</span>
+                </div>
+                <span class="status-badge-modern danger"><i class="fas fa-bolt"></i> 2 Critical Actions</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="padding: 16px; border: 1.5px solid #FEE2E2; background: #FEF2F2; border-radius: 14px;">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                    <strong style="color: #991B1B; font-size: 0.92rem;">Income Tax Advance Tax Installment 4</strong>
+                    <span style="font-size: 0.7rem; font-weight: 800; background: #EF4444; color: #FFFFFF; padding: 2px 8px; border-radius: 6px;">DUE IN 3 DAYS</span>
+                  </div>
+                  <p style="font-size: 0.78rem; color: #7F1D1D; margin: 0 0 10px;">48 Corporate entities pending challan verification &bull; Total liability ₹4.2 Cr</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="status-badge-modern warning" style="font-size: 0.72rem;">78% Verified</span>
+                    <a href="404.html" class="btn-dash-action" style="padding: 5px 12px; font-size: 0.74rem;"><i class="fas fa-paper-plane"></i> Batch Challan Alert</a>
+                  </div>
+                </div>
+
+                <div style="padding: 16px; border: 1.5px solid #DBEAFE; background: #EFF6FF; border-radius: 14px;">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                    <strong style="color: #1E40AF; font-size: 0.92rem;">MCA Form AOC-4 Financial Audit Filing</strong>
+                    <span style="font-size: 0.7rem; font-weight: 800; background: #2563EB; color: #FFFFFF; padding: 2px 8px; border-radius: 6px;">DSC CERTIFIED</span>
+                  </div>
+                  <p style="font-size: 0.78rem; color: #1E3A8A; margin: 0 0 10px;">Board balance sheets audited &bull; 18 groups pending AGM minute attachment</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span class="status-badge-modern info" style="font-size: 0.72rem;">92% Ready</span>
+                    <a href="404.html" class="btn-dash-outline" style="padding: 5px 12px; font-size: 0.74rem;"><i class="fas fa-file-signature"></i> Partner Sign</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        
+        
+        <div class="dash-tab-pane" id="tab-clients">
+          <div class="dash-card-box">
+            <div class="dash-card-box-header">
+              <div>
+                <h4><i class="fas fa-building-user" style="color: #072B24; margin-right: 8px;"></i> Corporate Client Roster (164 Groups)</h4>
+                <span style="font-size: 0.76rem; color: #64748B;">Accredited Enterprise Retainer Entities Under Direct Advisory</span>
+              </div>
+              <div class="table-search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="table-search-input" placeholder="Search clients, sectors, or CA...">
+              </div>
+            </div>
+
+            <div class="table-responsive-box">
+              <table class="modern-data-table">
+                <thead>
+                  <tr>
+                    <th>Enterprise Client</th>
+                    <th>Sector</th>
+                    <th>Retainer Value</th>
+                    <th>Managing CA Partner</th>
+                    <th>Statutory Health</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong style="display: block; color: #0F172A;">Salem Steel Rolling Mills Ltd</strong>
+                      <span style="font-size: 0.72rem; color: #64748B;">GSTIN: 33AAACS9281M1ZX</span>
+                    </td>
+                    <td>Manufacturing</td>
+                    <td><strong>₹36,00,000 / yr</strong></td>
+                    <td>CA Vignesh Moorthy</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-check-circle"></i> Clean Audit</span></td>
+                    <td><span class="status-badge-modern success">Active VIP</span></td>
+                    <td><a href="404.html" class="btn-dash-action" style="padding: 4px 10px; font-size: 0.72rem;">View Dossier</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="display: block; color: #0F172A;">Apex Garment Exports Consortium</strong>
+                      <span style="font-size: 0.72rem; color: #64748B;">GSTIN: 33AABCA8401K1ZW</span>
+                    </td>
+                    <td>Textiles &amp; Apparel</td>
+                    <td><strong>₹28,50,000 / yr</strong></td>
+                    <td>CA Deepika Sundar</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-check-circle"></i> Clean Audit</span></td>
+                    <td><span class="status-badge-modern success">Active VIP</span></td>
+                    <td><a href="404.html" class="btn-dash-action" style="padding: 4px 10px; font-size: 0.72rem;">View Dossier</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="display: block; color: #0F172A;">Kaveri Healthcare &amp; Super Specialty</strong>
+                      <span style="font-size: 0.72rem; color: #64748B;">GSTIN: 33AACCK4920L1ZP</span>
+                    </td>
+                    <td>Hospitals &amp; Medical</td>
+                    <td><strong>₹42,00,000 / yr</strong></td>
+                    <td>CA Arjun Rao</td>
+                    <td><span class="status-badge-modern warning"><i class="fas fa-clock"></i> Form 3CD Pending</span></td>
+                    <td><span class="status-badge-modern info">Onboarding</span></td>
+                    <td><a href="404.html" class="btn-dash-action" style="padding: 4px 10px; font-size: 0.72rem;">View Dossier</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="display: block; color: #0F172A;">Deccan Logistics &amp; Cold Storage</strong>
+                      <span style="font-size: 0.72rem; color: #64748B;">GSTIN: 33AAACD3310N1ZR</span>
+                    </td>
+                    <td>Supply Chain</td>
+                    <td><strong>₹24,00,000 / yr</strong></td>
+                    <td>CA Suresh Kumar</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-check-circle"></i> Reconciled</span></td>
+                    <td><span class="status-badge-modern success">Active VIP</span></td>
+                    <td><a href="404.html" class="btn-dash-action" style="padding: 4px 10px; font-size: 0.72rem;">View Dossier</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="display: block; color: #0F172A;">CloudStack Software Labs Pvt Ltd</strong>
+                      <span style="font-size: 0.72rem; color: #64748B;">GSTIN: 29AABCC9102H1ZQ</span>
+                    </td>
+                    <td>SaaS &amp; Tech</td>
+                    <td><strong>₹32,50,000 / yr</strong></td>
+                    <td>CA Vignesh Moorthy</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-shield-alt"></i> Transfer Pricing OK</span></td>
+                    <td><span class="status-badge-modern success">Active VIP</span></td>
+                    <td><a href="404.html" class="btn-dash-action" style="padding: 4px 10px; font-size: 0.72rem;">View Dossier</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        
+        
+        
+        <div class="dash-tab-pane" id="tab-filings">
+          <div class="dash-card-box">
+            <div class="dash-card-box-header">
+              <div>
+                <h4><i class="fas fa-file-circle-check" style="color: #072B24; margin-right: 8px;"></i> Statutory Filings, Tax Audits &amp; MCA Returns</h4>
+                <span style="font-size: 0.76rem; color: #64748B;">Fiscal Year 2025-26 Compliance Submissions Schedule</span>
+              </div>
+              <a href="404.html" class="btn-dash-action"><i class="fas fa-plus"></i> Upload Audit Certificate</a>
+            </div>
+
+            <div class="table-responsive-box">
+              <table class="modern-data-table">
+                <thead>
+                  <tr>
+                    <th>Filing Description</th>
+                    <th>Target Client</th>
+                    <th>Statutory Form</th>
+                    <th>Due Date</th>
+                    <th>Digital Signature</th>
+                    <th>Filing Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Income Tax Statutory Audit</strong></td>
+                    <td>Apex Garment Exports Consortium</td>
+                    <td>Form 3CD / 3CA</td>
+                    <td>Oct 31, 2026</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-stamp"></i> DSC Affixed</span></td>
+                    <td><span class="status-badge-modern success">Certified &amp; Filed</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>GST Annual Return &amp; Reconciliation</strong></td>
+                    <td>Salem Steel Rolling Mills</td>
+                    <td>GSTR-9 &amp; 9C</td>
+                    <td>Dec 31, 2026</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-stamp"></i> DSC Affixed</span></td>
+                    <td><span class="status-badge-modern success">100% Reconciled</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Transfer Pricing Scrutiny Certification</strong></td>
+                    <td>CloudStack Software Labs</td>
+                    <td>Form 3CEB</td>
+                    <td>Nov 30, 2026</td>
+                    <td><span class="status-badge-modern warning"><i class="fas fa-clock"></i> Partner Sign-Off</span></td>
+                    <td><span class="status-badge-modern warning">In Scrutiny</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>MCA Board Financial Statement Filing</strong></td>
+                    <td>Deccan Logistics Pvt Ltd</td>
+                    <td>AOC-4 &amp; MGT-7</td>
+                    <td>Nov 15, 2026</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-stamp"></i> DSC Affixed</span></td>
+                    <td><span class="status-badge-modern success">Accepted by MCA</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        
+        
+        
+        <div class="dash-tab-pane" id="tab-notices">
+          <div class="dash-card-box">
+            <div class="dash-card-box-header">
+              <div>
+                <h4><i class="fas fa-shield-halved" style="color: #FF7A00; margin-right: 8px;"></i> Tax Litigation Defense &amp; Appellate Desk</h4>
+                <span style="font-size: 0.76rem; color: #64748B;">Representation Before Income Tax Tribunals &amp; GST Authorities</span>
+              </div>
+              <span class="status-badge-modern success"><i class="fas fa-award"></i> 100% Penalty Shield Defense</span>
+            </div>
+
+            <div class="table-responsive-box">
+              <table class="modern-data-table">
+                <thead>
+                  <tr>
+                    <th>Notice Reference</th>
+                    <th>Enterprise Client</th>
+                    <th>Authority / Forum</th>
+                    <th>Contested Amount</th>
+                    <th>Appellate Status</th>
+                    <th>Next Hearing</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>GST Sec 73 (ITC Reversal Dispute)</strong></td>
+                    <td>Salem Steel Rolling Mills</td>
+                    <td>Commercial Tax Dept, Salem</td>
+                    <td>₹1,42,00,000</td>
+                    <td><span class="status-badge-modern success">Rebuttal Accepted</span></td>
+                    <td>Final Dropped Order</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sec 148 Reassessment Defense</strong></td>
+                    <td>Apex Garment Consortium</td>
+                    <td>ITAT Chennai Bench</td>
+                    <td>₹84,50,000</td>
+                    <td><span class="status-badge-modern info">Written Submissions In</span></td>
+                    <td>Nov 12, 2026</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Customs Duty Drawback Discrepancy</strong></td>
+                    <td>Deccan Infra Logistics</td>
+                    <td>Customs Appellate Tribunal</td>
+                    <td>₹38,00,000</td>
+                    <td><span class="status-badge-modern success">Interim Relief Granted</span></td>
+                    <td>Nov 28, 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        
+        
+        
+        <div class="dash-tab-pane" id="tab-treasury">
+          <div class="dash-card-box">
+            <div class="dash-card-box-header">
+              <div>
+                <h4><i class="fas fa-vault" style="color: #072B24; margin-right: 8px;"></i> Retainer Treasury &amp; Realized Revenue</h4>
+                <span style="font-size: 0.76rem; color: #64748B;">Quarterly Billing Realization &bull; Real-time Fee Reconciliation</span>
+              </div>
+              <span class="fc-kpi-tag positive"><i class="fas fa-circle-check"></i> 96.4% Fee Collected</span>
+            </div>
+
+            <div class="table-responsive-box">
+              <table class="modern-data-table">
+                <thead>
+                  <tr>
+                    <th>Invoice No</th>
+                    <th>Enterprise Account</th>
+                    <th>Quarter</th>
+                    <th>Professional Fee</th>
+                    <th>GST (18%)</th>
+                    <th>Payment Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#STK-2026-Q4-019</strong></td>
+                    <td>Salem Steel Rolling Mills</td>
+                    <td>FY25-26 Q4</td>
+                    <td>₹9,00,000</td>
+                    <td>₹1,62,000</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-check-circle"></i> Paid &bull; NEFT</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#STK-2026-Q4-020</strong></td>
+                    <td>Apex Garment Exports</td>
+                    <td>FY25-26 Q4</td>
+                    <td>₹7,12,500</td>
+                    <td>₹1,28,250</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-check-circle"></i> Paid &bull; RTGS</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#STK-2026-Q4-021</strong></td>
+                    <td>CloudStack Labs Pvt Ltd</td>
+                    <td>FY25-26 Q4</td>
+                    <td>₹8,12,500</td>
+                    <td>₹1,46,250</td>
+                    <td><span class="status-badge-modern success"><i class="fas fa-check-circle"></i> Paid &bull; Wire</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  
+  <div id="logoutModal" class="auth-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle">
+    <div class="auth-modal-card">
+      <div class="auth-modal-icon" style="background: rgba(239, 68, 68, 0.12); color: #EF4444;">
+        <i class="fas fa-arrow-right-from-bracket" style="font-size: 1.8rem;"></i>
+      </div>
+      <h3 id="logoutModalTitle" style="color: #0F172A; font-weight: 800; margin-bottom: 8px;">Terminate Partner Session?</h3>
+      <p style="color: #64748B; font-size: 0.92rem; margin-bottom: 24px;">
+        Are you sure you want to log out of the Stackly Executive Console? Your accredited workspace will be securely encrypted.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <button type="button" class="btn-dash-outline" id="cancelLogoutBtn" style="padding: 10px 22px; font-size: 0.88rem;">Cancel</button>
+        <button type="button" class="btn-dash-action" id="confirmLogoutBtn" style="background: #EF4444; padding: 10px 22px; font-size: 0.88rem;">Yes, Logout</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="auditScanModal" class="auth-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="auditScanModalTitle">
+    <div class="auth-modal-card audit-radar-card">
+      <div class="audit-radar-header">
+        <div>
+          <h3 id="auditScanModalTitle" class="audit-radar-title">
+            <i class="fas fa-radar" style="color: #10B981; margin-right: 8px;"></i> Salem Practice Audit Radar
+          </h3>
+          <span class="audit-radar-subtitle">Automated Full-Portfolio Regulatory Compliance Diagnostics</span>
+        </div>
+        <button type="button" id="closeAuditScanBtn" class="audit-radar-close-btn" aria-label="Close Radar">&times;</button>
+      </div>
+
+      
+      <div id="auditScanningState">
+        <div class="audit-radar-box">
+          <div class="audit-radar-status-row">
+            <span id="auditScanStatusText" style="color: #072B24;">Initializing Ledger Audit Engine...</span>
+            <span id="auditScanPercent" style="color: #10B981;">0%</span>
+          </div>
+          <div class="audit-radar-progress-track">
+            <div id="auditScanProgressBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #072B24, #98E300); transition: width 0.3s ease;"></div>
+          </div>
+        </div>
+
+        <div class="audit-radar-log" id="auditScanLog">
+          <div id="scanStep1" class="audit-scan-step" style="opacity: 0.4;">
+            <i class="fas fa-circle-notch fa-spin"></i> Reconciling 164 Corporate Retainer Ledgers &amp; Escrows
+          </div>
+          <div id="scanStep2" class="audit-scan-step" style="opacity: 0.4;">
+            <i class="fas fa-circle-notch fa-spin"></i> Cross-verifying MCA Form AOC-4 Filings with ROC MCA Portal
+          </div>
+          <div id="scanStep3" class="audit-scan-step" style="opacity: 0.4;">
+            <i class="fas fa-circle-notch fa-spin"></i> Running GSTIN Section 73 &amp; ITC GSTR-2B Mismatch Detection
+          </div>
+          <div id="scanStep4" class="audit-scan-step" style="opacity: 0.4;">
+            <i class="fas fa-circle-notch fa-spin"></i> Generating ICAI Peer-Review Audit Certification Key
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="auditScanCompleteState" style="display: none;">
+        <div class="audit-radar-complete-box">
+          <div class="audit-radar-complete-icon">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <strong class="audit-radar-complete-title">Zero Regulatory Discrepancies Found</strong>
+          <p class="audit-radar-complete-desc">All 164 enterprise accounts verified. DSC signatures compliant. ICAI Standard AA+ certified.</p>
+        </div>
+
+        <div class="audit-radar-actions">
+          <button type="button" class="btn-dash-outline" id="dismissAuditScanBtn">Close Radar</button>
+          <a href="404.html" class="btn-dash-action"><i class="fas fa-download"></i> Export Audit Dossier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

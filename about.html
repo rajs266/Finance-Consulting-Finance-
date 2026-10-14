@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Stackly Finance Consulting</title>
+  
+  
+  <link rel="icon" href="assets/top-logo.webp">
+  
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="preloader-active">
+  <!-- =========================================================================
+       PAGE PRELOADER (FINANCE INTELLIGENCE)
+       ========================================================================= -->
+  <div id="financePreloader" class="finance-preloader" role="status" aria-live="polite" aria-label="Loading Page">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-content-box">
+      
+      <div class="preloader-emblem-wrap">
+        <div class="emblem-pulse-ring"></div>
+        <div class="emblem-rotate-ring"></div>
+        <svg class="preloader-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="rgba(152, 227, 0, 0.18)" stroke-width="2" />
+          <circle class="preloader-ring-spinner" cx="40" cy="40" r="36" stroke="url(#preloaderGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="56 170" />
+          <rect class="p-bar p-bar-1" x="22" y="44" width="6" height="16" rx="2" fill="#4E635F" />
+          <rect class="p-bar p-bar-2" x="31" y="36" width="6" height="24" rx="2" fill="#7E938F" />
+          <rect class="p-bar p-bar-3" x="40" y="28" width="6" height="32" rx="2" fill="#98E300" />
+          <rect class="p-bar p-bar-4" x="49" y="20" width="6" height="40" rx="2" fill="#00E599" />
+          <path class="p-trend-line" d="M22 43 L32 34 L41 27 L51 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle class="p-trend-glow" cx="51" cy="18" r="3.5" fill="#98E300" />
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#98E300" />
+              <stop offset="50%" stop-color="#00E599" />
+              <stop offset="100%" stop-color="#38BDF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      
+      <div class="preloader-brand">
+        <h2 class="preloader-title">STACKLY<span class="preloader-accent">.</span></h2>
+        <span class="preloader-sub">FINANCIAL CONSULTING</span>
+      </div>
+
+      
+      <div class="preloader-status-bar">
+        <span class="preloader-status-text" id="preloaderStatusText">Optimizing Financial Assets...</span>
+        <span class="preloader-counter" id="preloaderPercent">0%</span>
+      </div>
+
+      
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header header-merged">
+    <div class="container nav-container">
+      
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly Logo">
+      </a>
+
+      
+      <nav class="nav-menu" id="navMenu">
+        
+        <div class="mobile-nav-header">
+          <a href="index.html" class="mobile-nav-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <button class="mobile-nav-close" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        
+        <div class="mobile-nav-links">
+          <a href="index.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+              <span class="nav-text">Home</span>
+            </span>
+          </a>
+
+          <a href="about.html" class="nav-link active">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">About</span>
+            </span>
+          </a>
+
+          <a href="service.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Service</span>
+            </span>
+          </a>
+
+          <a href="blog.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Blog</span>
+            </span>
+          </a>
+
+          <a href="contact.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Contact Us</span>
+            </span>
+          </a>
+        </div>
+
+        
+        <div class="mobile-nav-footer">
+          <a href="signin.html" class="btn btn-lime btn-mobile-login">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+              </span>
+              <span class="nav-text">Log In</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+
+      
+      <div class="nav-cta">
+        <a href="signin.html" class="btn btn-lime btn-nav-login">Log In</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+  <!-- =========================================================================
+       2. ABOUT PAGE HERO SECTION (CUSTOM BACKGROUND IMAGE)
+       ========================================================================= -->
+  <section class="subpage-hero" style="--subpage-hero-bg: url('assets/hero-about.webp');">
+    <div class="subpage-hero-overlay"></div>
+    <div class="container subpage-hero-container">
+      
+      <div class="subpage-hero-content" data-slide="left">
+        <nav class="subpage-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span class="breadcrumb-current">About Us</span>
+        </nav>
+        <span class="subpage-hero-tag">About Stackly Advisory</span>
+        <h1 class="subpage-hero-title">Empowering Growth With Strategic Financial Clarity</h1>
+        <p class="subpage-hero-desc">We partner with ambitious enterprises and market leaders to navigate complex financial landscapes, optimize capital allocation, and unlock sustainable value.</p>
+        <div class="subpage-hero-actions">
+          <a href="service.html" class="btn btn-lime">Our Services</a>
+          <a href="contact.html" class="btn btn-dark" style="border: 1px solid rgba(255, 255, 255, 0.25);">Book Consultation</a>
+        </div>
+      </div>
+
+      
+      <div class="subpage-hero-card" data-slide="right">
+        <div class="subpage-hero-card-header">
+          <div class="subpage-hero-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Advisory Highlights</h3>
+        </div>
+        <div class="subpage-hero-stats-grid">
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">$2.4B+</span>
+            <span class="subpage-hero-stat-label">Capital Advised</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">98.6%</span>
+            <span class="subpage-hero-stat-label">Client Retention</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">12+ Yrs</span>
+            <span class="subpage-hero-stat-label">Market Excellence</span>
+          </div>
+          <div class="subpage-hero-stat-item">
+            <span class="subpage-hero-stat-val">500+</span>
+            <span class="subpage-hero-stat-label">Enterprises Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. OUR MISSION SECTION
+       ========================================================================= -->
+  <section class="section about-hero-section">
+    <div class="container about-mission-grid">
+      
+      <div class="mission-content" data-slide="left">
+        <h2 class="mission-heading">Our Mission</h2>
+        <p>At Stackly our mission is clear: to help businesses excel in an ever-evolving digital landscape. We are dedicated to providing strategic insights and innovative solutions that drive growth, streamline operations, and foster long-term success.</p>
+        <p>Our approach is rooted in deep industry knowledge, combined with hands-on experience, to deliver customized strategies that help businesses thrive.</p>
+        
+        
+        <div class="ceo-profile">
+          <div class="ceo-avatar">
+            <img src="assets/ceo-avatar.webp" alt="John Smith CEO">
+          </div>
+          <div class="ceo-info">
+            <h4>John Smith</h4>
+            <p>Ceo</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="mission-image-wrap" data-slide="right">
+        <img src="assets/mission-image.webp" alt="Stackly consulting leadership in session">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. OUR VISION SECTION
+       ========================================================================= -->
+  <section class="section vision-section">
+    <div class="container vision-grid">
+      
+      <div class="vision-image-wrap" data-slide="left">
+        <img src="assets/vision-image.webp" alt="Collaborative business agreement and strategic handshake">
+      </div>
+
+      
+      <div class="vision-content" data-slide="right">
+        <h2>Our Vision</h2>
+        <p>We envision a future where businesses harness the power of technology and strategic thinking to achieve their goals.</p>
+        
+        <ul class="vision-checklist">
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span>Drive business growth with strategic foresight.</span>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span>Provide solutions tailored to your challenges.</span>
+          </li>
+          <li>
+            <div class="check-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span>Keep businesses ahead of market trends.</span>
+          </li>
+        </ul>
+
+        <a href="signup.html" class="btn btn-dark">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       4. DISCOVER OUR TEAM SECTION
+       ========================================================================= -->
+  <section class="section team-section">
+    <div class="container">
+      <div class="team-header" data-reveal>
+        <h2 class="section-title">Discover Our Team</h2>
+        <p class="section-subtitle">Explore the range of abilities and skills that our team member brings to the table to strengthen our group as a whole.</p>
+      </div>
+
+      <div class="team-grid">
+        
+        <div class="team-card" data-reveal data-slide="left">
+          <div class="team-thumb">
+            <img src="assets/team-1.webp" alt="Ethan Smith">
+          </div>
+          <div class="team-info">
+            <div class="team-info-left">
+              <h4>Ethan Smith</h4>
+              <p>Chief Strategist</p>
+            </div>
+            <a href="404.html" class="team-share-btn" aria-label="Connect with Ethan Smith on LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="team-card delay-1" data-reveal>
+          <div class="team-thumb">
+            <img src="assets/team-2.webp" alt="Smith Etil">
+          </div>
+          <div class="team-info">
+            <div class="team-info-left">
+              <h4>Smith Etil</h4>
+              <p>Lead Developer</p>
+            </div>
+            <a href="404.html" class="team-share-btn" aria-label="Connect with Smith Etil on LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="team-card delay-2" data-reveal>
+          <div class="team-thumb">
+            <img src="assets/team-4.webp" alt="Chloe Davis">
+          </div>
+          <div class="team-info">
+            <div class="team-info-left">
+              <h4>Chloe Davis</h4>
+              <p>Creative Director</p>
+            </div>
+            <a href="404.html" class="team-share-btn" aria-label="Connect with Chloe Davis on LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        
+        <div class="team-card delay-3" data-reveal data-slide="right">
+          <div class="team-thumb">
+            <img src="assets/team-3.webp" alt="Morina Mok">
+          </div>
+          <div class="team-info">
+            <div class="team-info-left">
+              <h4>Morina Mok</h4>
+              <p>Marketing Manager</p>
+            </div>
+            <a href="404.html" class="team-share-btn" aria-label="Connect with Morina Mok on LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. VISIT OUR MAIN OFFICES AROUND THE GLOBE SECTION
+       ========================================================================= -->
+  <section class="section offices-section">
+    <div class="container">
+      <div class="offices-header-grid" data-reveal>
+        <div>
+          <h2 class="section-title">Visit Our Main Offices Around The Globe</h2>
+        </div>
+        <div>
+          <p class="section-subtitle">Explore our office locations worldwide and see how we are expanding to serve you better.</p>
+        </div>
+      </div>
+
+      <div class="offices-layout">
+        
+        <div class="offices-accordion" data-slide="left">
+          
+          <div class="office-item active">
+            <div class="office-title-row">
+              <h3>America</h3>
+              <div class="office-arrow">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="office-content">
+              <p>Our primary office for creating and customizing solutions.</p>
+              <p class="office-address">754 Pennsylvania Avenue NW, Washington, DC 20500, USA</p>
+            </div>
+          </div>
+
+          
+          <div class="office-item">
+            <div class="office-title-row">
+              <h3>Australia</h3>
+              <div class="office-arrow">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="office-content">
+              <p>Strategic Asia-Pacific consulting center delivering regional market leadership and cross-border expansion.</p>
+              <p class="office-address">100 Barangaroo Avenue, Sydney, NSW 2000, Australia</p>
+            </div>
+          </div>
+
+          
+          <div class="office-item">
+            <div class="office-title-row">
+              <h3>England</h3>
+              <div class="office-arrow">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="office-content">
+              <p>European headquarters facilitating global capital restructuring, governance, and private advisory.</p>
+              <p class="office-address">30 St Mary Axe, London, EC3A 8EP, United Kingdom</p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="offices-image-wrap" data-slide="right">
+          <img src="assets/offices-image.webp" alt="Stackly global offices in metropolitan hubs">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. FOOTER (SHARED COMPONENT)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>Empowering Businesses with Tailored Consulting Solutions.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42A2.5 2.5 0 002.42 7.19C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 001.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+          </div>
+          <div class="footer-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Certified Global Advisory</span>
+          </div>
+          <p class="footer-sub-note">Trusted by 5,000+ businesses worldwide for strategic financial growth.</p>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="404.html">Financial Strategy</a>
+            <a href="404.html">Investment Advisory</a>
+            <a href="404.html">Tax Optimization</a>
+            <a href="404.html">Risk Management</a>
+            <a href="404.html">Capital Growth</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>02 37688 77</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>info@stackly.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>123 Business St., City, Country</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>24/7 Online Client Advisory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+          </svg>
+          <span>Copyright all right reserved Stackly</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+          <span>•</span>
+          <a href="404.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>

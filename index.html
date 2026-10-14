@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Strategic Finance & Business Consulting</title>
+  
+  
+  <link rel="icon" href="assets/top-logo.webp">
+  
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="preloader-active">
+  <!-- =========================================================================
+       PAGE PRELOADER (FINANCE INTELLIGENCE)
+       ========================================================================= -->
+  <div id="financePreloader" class="finance-preloader" role="status" aria-live="polite" aria-label="Loading Page">
+    <div class="preloader-bg-overlay"></div>
+    <div class="preloader-content-box">
+      
+      <div class="preloader-emblem-wrap">
+        <div class="emblem-pulse-ring"></div>
+        <div class="emblem-rotate-ring"></div>
+        <svg class="preloader-emblem-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="36" stroke="rgba(152, 227, 0, 0.18)" stroke-width="2" />
+          <circle class="preloader-ring-spinner" cx="40" cy="40" r="36" stroke="url(#preloaderGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="56 170" />
+          <rect class="p-bar p-bar-1" x="22" y="44" width="6" height="16" rx="2" fill="#4E635F" />
+          <rect class="p-bar p-bar-2" x="31" y="36" width="6" height="24" rx="2" fill="#7E938F" />
+          <rect class="p-bar p-bar-3" x="40" y="28" width="6" height="32" rx="2" fill="#98E300" />
+          <rect class="p-bar p-bar-4" x="49" y="20" width="6" height="40" rx="2" fill="#00E599" />
+          <path class="p-trend-line" d="M22 43 L32 34 L41 27 L51 18" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <circle class="p-trend-glow" cx="51" cy="18" r="3.5" fill="#98E300" />
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#98E300" />
+              <stop offset="50%" stop-color="#00E599" />
+              <stop offset="100%" stop-color="#38BDF8" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      
+      <div class="preloader-brand">
+        <h2 class="preloader-title">STACKLY<span class="preloader-accent">.</span></h2>
+        <span class="preloader-sub">FINANCIAL CONSULTING</span>
+      </div>
+
+      
+      <div class="preloader-status-bar">
+        <span class="preloader-status-text" id="preloaderStatusText">Optimizing Financial Assets...</span>
+        <span class="preloader-counter" id="preloaderPercent">0%</span>
+      </div>
+
+      
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header header-merged">
+    <div class="container nav-container">
+      
+      <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+        <img src="assets/logo.webp" alt="Stackly Logo">
+      </a>
+
+      
+      <nav class="nav-menu" id="navMenu">
+        
+        <div class="mobile-nav-header">
+          <a href="index.html" class="mobile-nav-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <button class="mobile-nav-close" id="mobileCloseBtn" aria-label="Close navigation menu">
+            <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        
+        <div class="mobile-nav-links">
+          <a href="index.html" class="nav-link active">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </span>
+              <span class="nav-text">Home</span>
+            </span>
+          </a>
+
+          <a href="about.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="nav-text">About</span>
+            </span>
+          </a>
+
+          <a href="service.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Service</span>
+            </span>
+          </a>
+
+          <a href="blog.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Blog</span>
+            </span>
+          </a>
+
+          <a href="contact.html" class="nav-link">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </span>
+              <span class="nav-text">Contact Us</span>
+            </span>
+          </a>
+        </div>
+
+        
+        <div class="mobile-nav-footer">
+          <a href="signin.html" class="btn btn-lime btn-mobile-login">
+            <span class="nav-link-content">
+              <span class="nav-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                  <polyline points="10 17 15 12 10 7"></polyline>
+                  <line x1="15" y1="12" x2="3" y2="12"></line>
+                </svg>
+              </span>
+              <span class="nav-text">Log In</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+
+      
+      <div class="nav-cta">
+        <a href="signin.html" class="btn btn-lime btn-nav-login">Log In</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+
+  <!-- =========================================================================
+       2. HERO SECTION (FULL COVER BACKGROUND SLIDER WITH SHADOW OVERLAY)
+       ========================================================================= -->
+  <section class="hero-section full-cover-hero" id="home">
+    
+    <div class="hero-bg-slider">
+      <div class="hero-bg-track">
+        <div class="hero-bg-slide active">
+          <img src="assets/hero (1).webp" alt="Stackly strategic consulting leadership conference">
+        </div>
+        <div class="hero-bg-slide">
+          <img src="assets/hero (2).webp" alt="Stackly executive finance advisory meeting">
+        </div>
+        <div class="hero-bg-slide">
+          <img src="assets/hero (3).webp" alt="Stackly corporate leadership strategic planning session">
+        </div>
+        <div class="hero-bg-slide">
+          <img src="assets/hero (4).webp" alt="Stackly consultants collaborating on business growth roadmap">
+        </div>
+      </div>
+      
+      <div class="hero-bg-overlay"></div>
+    </div>
+
+    
+    <div class="container hero-container-rel">
+      <div class="hero-content-box" data-slide="left">
+        <span class="section-tag">Finance & Strategic Advisory</span>
+        <h1>
+          <span class="hero-title-line">Transform Your</span>
+          <span class="hero-title-line">Business with</span>
+          <span class="hero-title-line title-accent-line">
+            <span class="hero-accent-text"><span id="heroTypingText">Strategic Insights</span><span class="typing-cursor">|</span></span>
+          </span>
+        </h1>
+        <p>Empowering businesses to navigate complex challenges, optimize financial efficiency, and achieve sustainable growth with tailored consulting solutions.</p>
+        <div class="hero-actions">
+          <a href="signup.html" class="btn btn-lime">Book A Consultation</a>
+          <a href="about.html" class="btn btn-dark" style="border: 1px solid rgba(255, 255, 255, 0.25);">Explore Stackly</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       3. PARTNER / CLIENT LOGOS TICKER BAR
+       ========================================================================= -->
+  <div class="partners-bar">
+    <div class="marquee-track">
+      
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+        <span>Google</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 100 16 8 8 0 000-16zm-1 12l-4-4 1.41-1.41L11 13.17l5.59-5.58L18 9l-7 7z"/></svg>
+        <span>Upwork</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M6 15a2 2 0 100-4 2 2 0 000 4zm6 0a2 2 0 100-4 2 2 0 000 4zm6 0a2 2 0 100-4 2 2 0 000 4z"/></svg>
+        <span>Slack</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        <span>Dropbox</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5 9.5 9.75 12 11zm0 2.5L4.5 9.75 2 11l10 5 10-5-2.5-1.25L12 13.5z"/></svg>
+        <span>HubSpot</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+        <span>Microsoft</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+        <span>Amazon</span>
+      </div>
+
+      
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+        <span>Google</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 100 16 8 8 0 000-16zm-1 12l-4-4 1.41-1.41L11 13.17l5.59-5.58L18 9l-7 7z"/></svg>
+        <span>Upwork</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M6 15a2 2 0 100-4 2 2 0 000 4zm6 0a2 2 0 100-4 2 2 0 000 4zm6 0a2 2 0 100-4 2 2 0 000 4z"/></svg>
+        <span>Slack</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        <span>Dropbox</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5 9.5 9.75 12 11zm0 2.5L4.5 9.75 2 11l10 5 10-5-2.5-1.25L12 13.5z"/></svg>
+        <span>HubSpot</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/></svg>
+        <span>Microsoft</span>
+      </div>
+      <div class="partner-logo-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+        <span>Amazon</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       4. THE JOURNEY TO SUCCESS SECTION
+       ========================================================================= -->
+  <section class="section journey-section">
+    <div class="container journey-grid">
+      
+      <div class="journey-content" data-slide="left">
+        <span class="section-tag dark">The Journey to Success</span>
+        <h2 class="section-title">Our dedicated consulting firm has guided more than 500+ businesses towards long-term success.</h2>
+        <p>At Stackly, we merge cutting-edge financial modeling with pragmatic strategic advisory. Our multidisciplinary specialists work side-by-side with your leadership team to eliminate bottlenecks, build scalable frameworks, and unlock new avenues of enterprise value.</p>
+        <a href="about.html" class="btn btn-lime">Read More</a>
+      </div>
+
+      
+      <div class="journey-image-wrap" data-slide="right">
+        <div class="journey-image">
+          <img src="assets/journey-image.webp" alt="Stackly consultants celebrating business milestones">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       5. OUR SERVICE SECTION
+       ========================================================================= -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="text-center" data-reveal>
+        <h2 class="section-title">Our Service</h2>
+        <p class="section-subtitle">Comprehensive financial and strategic consulting solutions designed to accelerate your growth and secure long-term value.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <div class="service-card" data-reveal data-slide="left">
+          <div class="service-icon-box">
+            <img src="assets/service-1.webp" alt="Strategic Consulting Icon">
+          </div>
+          <h3>Strategic Consulting</h3>
+          <p>Unlocking high-impact opportunities through meticulous market intelligence, competitive positioning, and actionable multi-year roadmap execution.</p>
+          <a href="service.html" class="btn-link">
+            <span>Learn More</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        
+        <div class="service-card delay-1" data-reveal>
+          <div class="service-icon-box">
+            <img src="assets/service-2.webp" alt="Financial Advisory Icon">
+          </div>
+          <h3>Financial Advisory</h3>
+          <p>Optimizing capital allocation, liquidity management, valuation assessments, and governance structures to build resilient balance sheets.</p>
+          <a href="service.html" class="btn-link">
+            <span>Learn More</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        
+        <div class="service-card delay-2" data-reveal data-slide="right">
+          <div class="service-icon-box">
+            <img src="assets/service-3.webp" alt="Growth Acceleration Icon">
+          </div>
+          <h3>Growth Acceleration</h3>
+          <p>Modernizing core workflows, leveraging digital tools, and establishing scalable KPIs to propel topline revenue and overall operational speed.</p>
+          <a href="service.html" class="btn-link">
+            <span>Learn More</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       6. EMPOWERING SUCCESS: WHAT WE OFFER AT STACKLY
+       ========================================================================= -->
+  <section class="section offer-section">
+    <div class="container">
+      <div class="offer-header" data-reveal>
+        <span class="highlight-text">Empowering Success:</span>
+        <h2 class="section-title">What We Offer at Stackly</h2>
+        <p class="section-subtitle">We deliver integrated advisory services that streamline organizational complexity, empower leadership, and build lasting resilience.</p>
+      </div>
+
+      <div class="offer-grid">
+        
+        <div class="offer-image-wrap" data-slide="left">
+          <img src="assets/offer-image.webp" alt="Stackly team working together on consulting solutions">
+        </div>
+
+        
+        <div class="offer-list" data-slide="right">
+          <div class="offer-item">
+            <div class="offer-item-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="offer-item-text">
+              <h4>Strategic Consulting</h4>
+              <p>Tailored strategies that align with your long-term corporate vision and proactively navigate emerging shifts in competitive landscapes.</p>
+            </div>
+          </div>
+
+          <div class="offer-item">
+            <div class="offer-item-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="offer-item-text">
+              <h4>Innovation Advisory</h4>
+              <p>Modern solutions designed to transform your business model, modernize operations, and keep your organization comfortably ahead of competitors.</p>
+            </div>
+          </div>
+
+          <div class="offer-item">
+            <div class="offer-item-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <div class="offer-item-text">
+              <h4>Acceleration Roadmaps</h4>
+              <p>Actionable, data-backed execution blueprints that convert ambitious goals into measurable quarterly milestones with high accountability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       7. PRICING SOLUTION FOR SUCCESS
+       ========================================================================= -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="text-center" data-reveal>
+        <h2 class="section-title">Pricing Solution For Success</h2>
+        <p class="section-subtitle">At Consultant W, we blend innovation, expertise, and strategic vision to deliver tailored solutions that go beyond traditional consultancy</p>
+
+        
+        <div class="pricing-tabs">
+          <button class="pricing-tab-btn active" data-tier="starter">Starter Pack</button>
+          <button class="pricing-tab-btn" data-tier="basic">Basic Plan</button>
+          <button class="pricing-tab-btn" data-tier="professional">Professional Plan</button>
+          <button class="pricing-tab-btn" data-tier="enterprise">Enterprise Plan</button>
+        </div>
+      </div>
+
+      <div class="pricing-content-grid">
+        
+        <div class="pricing-card" data-slide="left">
+          <div class="pricing-amount">
+            <span class="price">$34</span>
+            <span class="period">/Month</span>
+          </div>
+          <p class="pricing-plan-desc">Each package is designed to address specific business needs, providing clients with tailored solutions for success:</p>
+
+          <ul class="pricing-features">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 11 15 16 9"></polyline>
+              </svg>
+              Comprehensive business analysis
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 11 15 16 9"></polyline>
+              </svg>
+              Customized strategic planning
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 11 15 16 9"></polyline>
+              </svg>
+              One-on-one consultation sessions
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 11 15 16 9"></polyline>
+              </svg>
+              Quarterly progress reviews
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 11 15 16 9"></polyline>
+              </svg>
+              Email support
+            </li>
+          </ul>
+
+          <div>
+            <a href="signup.html" class="btn btn-purchase">Purchase Now</a>
+          </div>
+        </div>
+
+        
+        <div class="pricing-image-wrap" data-slide="right">
+          <img src="assets/blog-2.webp" alt="Strategic consulting team review session">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       8. TESTIMONIALS & STATS (INNOVATION AND EXCELLENT)
+       ========================================================================= -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="text-center testimonials-header" data-reveal>
+        <span class="accent-sub">Innovation And Excellent:</span>
+        <h2 class="section-title light">Client Stories From the Consultant</h2>
+        <p class="section-subtitle light">Discover how Stackly has partnered with forward-thinking leaders worldwide to achieve transformative financial outcomes.</p>
+      </div>
+
+      
+      <div class="testimonials-columns-wrap" data-reveal>
+        
+        <div class="reviews-vertical-col">
+          <div class="reviews-vertical-track scroll-col-1">
+            
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">"Working with him was a game-changer for my consulting business. He delivered our website ahead of schedule and it looks incredibly professional. Our clients now trust us more just from the first impression!"</p>
+              <div class="review-author">
+                <img src="assets/client-1.webp" alt="Kc Brown" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Kc Brown</span>
+                  <span class="author-role">Social Media Marketer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">“Before this, our website looked outdated and confusing. Now, it's sleek, modern, and shows exactly who we help and how. It finally feels like a premium consulting brand.”</p>
+              <div class="review-author">
+                <img src="assets/0c8ba4dd51e5dedc1ffedbf6d25adaaafa8d3e65.webp" alt="Amina Mehić" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Amina Mehić</span>
+                  <span class="author-role">Startup Advisor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">“Amazing Course, I have learnt so many things about Figma Prototype. Glad to do this course. Recommended for anyone who want to learn Figma prototype with following easy steps.”</p>
+              <div class="review-author">
+                <img src="assets/author.webp" alt="Amina Mehić" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Amina Mehić</span>
+                  <span class="author-role">Facebook Expert</span>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">"Working with him was a game-changer for my consulting business. He delivered our website ahead of schedule and it looks incredibly professional. Our clients now trust us more just from the first impression!"</p>
+              <div class="review-author">
+                <img src="assets/client-1.webp" alt="Kc Brown" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Kc Brown</span>
+                  <span class="author-role">Social Media Marketer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">“Before this, our website looked outdated and confusing. Now, it's sleek, modern, and shows exactly who we help and how. It finally feels like a premium consulting brand.”</p>
+              <div class="review-author">
+                <img src="assets/0c8ba4dd51e5dedc1ffedbf6d25adaaafa8d3e65.webp" alt="Amina Mehić" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Amina Mehić</span>
+                  <span class="author-role">Startup Advisor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">“Amazing Course, I have learnt so many things about Figma Prototype. Glad to do this course. Recommended for anyone who want to learn Figma prototype with following easy steps.”</p>
+              <div class="review-author">
+                <img src="assets/author.webp" alt="Amina Mehić" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Amina Mehić</span>
+                  <span class="author-role">Facebook Expert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="reviews-vertical-col">
+          <div class="reviews-vertical-track scroll-col-2">
+            
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">Digital Marketing has been working with me for a couple of years now. We've done it all, from PPC marketing to website development and SEO. I have worked with them for a while now. Helped me understand the difference between good content and great content. Look forward to growing my business with them.</p>
+              <div class="review-author">
+                <img src="assets/client-3.webp" alt="Otman Oil" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Otman Oil</span>
+                  <span class="author-role">Ui Designer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">**As someone who coaches executives, I needed a professional online presence. The design instantly communicates credibility and expertise —couldn't be happier.**</p>
+              <div class="review-author">
+                <img src="assets/client-2.webp" alt="Mohammad Philall" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Mohammad Philall</span>
+                  <span class="author-role">Executive Coach</span>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">Digital Marketing has been working with me for a couple of years now. We've done it all, from PPC marketing to website development and SEO. I have worked with them for a while now. Helped me understand the difference between good content and great content. Look forward to growing my business with them.</p>
+              <div class="review-author">
+                <img src="assets/client-3.webp" alt="Otman Oil" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Otman Oil</span>
+                  <span class="author-role">Ui Designer</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">**As someone who coaches executives, I needed a professional online presence. The design instantly communicates credibility and expertise —couldn't be happier.**</p>
+              <div class="review-author">
+                <img src="assets/client-2.webp" alt="Mohammad Philall" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Mohammad Philall</span>
+                  <span class="author-role">Executive Coach</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="reviews-vertical-col">
+          <div class="reviews-vertical-track scroll-col-3">
+            
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">**As someone who coaches executives, I needed a professional online presence. The design instantly communicates credibility and expertise —couldn't be happier.**</p>
+              <div class="review-author">
+                <img src="assets/client-4.webp" alt="Ana Sánchez" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Ana Sánchez</span>
+                  <span class="author-role">Sales Consultant</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">“I really enjoyed and learned a lot from this! I'm familiar with most Adobe softwares, and I was a bit scared to transition to Figma. However this tutorial helped me a lot, everything was explained well and clearly, I'm confident that this will help anyone even without design experience at all. Thank you so much Arash!”</p>
+              <div class="review-author">
+                <img src="assets/eddab7da1ff0ca1600f971833246c2a910ac0268.webp" alt="Joshua Perri" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Joshua Perri</span>
+                  <span class="author-role">Seo Expert</span>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">**As someone who coaches executives, I needed a professional online presence. The design instantly communicates credibility and expertise —couldn't be happier.**</p>
+              <div class="review-author">
+                <img src="assets/client-4.webp" alt="Ana Sánchez" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Ana Sánchez</span>
+                  <span class="author-role">Sales Consultant</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="review-card-v2" aria-hidden="true">
+              <div class="stars-gold">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <p class="review-text">“I really enjoyed and learned a lot from this! I'm familiar with most Adobe softwares, and I was a bit scared to transition to Figma. However this tutorial helped me a lot, everything was explained well and clearly, I'm confident that this will help anyone even without design experience at all. Thank you so much Arash!”</p>
+              <div class="review-author">
+                <img src="assets/eddab7da1ff0ca1600f971833246c2a910ac0268.webp" alt="Joshua Perri" class="review-avatar">
+                <div class="review-author-meta">
+                  <span class="author-name">Joshua Perri</span>
+                  <span class="author-role">Seo Expert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="stats-bar" data-reveal>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="suffix">k+</span>
+            </div>
+            <p class="stat-label">Happy Clients</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="6">0</span>
+              <span class="suffix">+</span>
+            </div>
+            <p class="stat-label">Years of Trust</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="30">0</span>
+              <span class="suffix">+</span>
+            </div>
+            <p class="stat-label">Experienced Consultants</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="200">0</span>
+              <span class="suffix">+</span>
+            </div>
+            <p class="stat-label">Successful Projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       9. LATEST BLOG POSTS SECTION
+       ========================================================================= -->
+  <section class="section blog-section" id="blog">
+    <div class="container">
+      <div class="text-center" data-reveal>
+        <h2 class="section-title">Latest Blog Posts</h2>
+        <p class="section-subtitle">Get insights from the latest industry trends and business strategies published every Friday.</p>
+      </div>
+
+      <div class="blog-grid blog-grid-even">
+        
+        <article class="featured-blog-card-v2" data-slide="left">
+          <div class="featured-blog-img-box">
+            <img src="assets/22e9ed55d901d42e5a85932731b0369d6c92794d.webp" alt="How to Streamline Your Consulting Process">
+          </div>
+          <div class="featured-blog-card-content">
+            <span class="blog-advise-pill">Advise</span>
+            <h3>How to Streamline Your Consulting Process</h3>
+            <p>In today's fast-paced business world, efficiency is key to success. As a consultant, you need to optimize your workflows, maximize resources, and ensure your clients get the results they need—faster.</p>
+            <a href="blog.html" class="blog-read-more-link">
+              <span>Read More</span>
+              <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        
+        <div class="blog-list-v2" data-slide="right">
+          
+          <article class="blog-row-card">
+            <div class="blog-row-thumb">
+              <img src="assets/blog-3.webp" alt="The Foundation of Successful Consulting">
+            </div>
+            <div class="blog-row-info">
+              <a href="blog.html" class="blog-row-cat">Strategy</a>
+              <h4 class="blog-row-title"><a href="blog.html">The Foundation of Successful Consulting</a></h4>
+              <span class="blog-row-date">April 30, 2025</span>
+            </div>
+          </article>
+
+          
+          <article class="blog-row-card">
+            <div class="blog-row-thumb">
+              <img src="assets/6d4090c9691e959945cb9b2ea4b09ff8386db346.webp" alt="What to Expect in 2025 and Beyond">
+            </div>
+            <div class="blog-row-info">
+              <a href="blog.html" class="blog-row-cat">Insights</a>
+              <h4 class="blog-row-title"><a href="blog.html">What to Expect in 2025 and Beyond</a></h4>
+              <span class="blog-row-date">April 30, 2025</span>
+            </div>
+          </article>
+
+          
+          <article class="blog-row-card">
+            <div class="blog-row-thumb">
+              <img src="assets/b3e856029f34027af6598de45ed6fe159045239c.webp" alt="Why Empathy Should Be Your Top Priority">
+            </div>
+            <div class="blog-row-info">
+              <a href="blog.html" class="blog-row-cat">Strategy</a>
+              <h4 class="blog-row-title"><a href="blog.html">Why Empathy Should Be Your Top Priority</a></h4>
+              <span class="blog-row-date">April 10, 2024</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       10. CALL TO ACTION BANNER (BOOK YOUR FREE DISCOVERY CALL)
+       ========================================================================= -->
+  <section class="cta-section" id="contact">
+    <div class="container">
+      <div class="cta-box" data-reveal data-scale>
+        <div class="cta-text">
+          <h2>Book Your Free<br>Discovery Call Today</h2>
+          <p>Take the first step towards transforming your business. Book a free discovery call and start your journey toward smarter strategies and better outcomes.</p>
+        </div>
+        <div class="cta-actions">
+          <div class="cta-arrow">
+            <img src="assets/Frame.webp" alt="Arrow pointing to consultation" class="discovery-arrow-img">
+          </div>
+          <div class="cta-button-group">
+            <a href="signup.html" class="btn btn-orange btn-discovery-call">
+              <span>Book a Discovery call</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <span class="cta-subnote">no commitment required</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       11. FOOTER (SHARED COMPONENT)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+            <img src="assets/logo.webp" alt="Stackly Logo">
+          </a>
+          <p>Empowering Businesses with Tailored Consulting Solutions.</p>
+          <div class="social-links">
+            <a href="404.html" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42A2.5 2.5 0 002.42 7.19C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 001.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+          </div>
+          <div class="footer-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Certified Global Advisory</span>
+          </div>
+          <p class="footer-sub-note">Trusted by 5,000+ businesses worldwide for strategic financial growth.</p>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service.html">Service</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <div class="footer-links">
+            <a href="404.html">Financial Strategy</a>
+            <a href="404.html">Investment Advisory</a>
+            <a href="404.html">Tax Optimization</a>
+            <a href="404.html">Risk Management</a>
+            <a href="404.html">Capital Growth</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>02 37688 77</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>info@stackly.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>123 Business St., City, Country</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>24/7 Online Client Advisory</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M14.83 14.83a4 4 0 1 1 0-5.66"></path>
+          </svg>
+          <span>Copyright all right reserved Stackly</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="404.html">Terms of Service</a>
+          <span>•</span>
+          <a href="404.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="main.js"></script>
+</body>
+</html>
